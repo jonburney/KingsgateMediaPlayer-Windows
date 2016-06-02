@@ -23,6 +23,10 @@ namespace MainApp
 {
     class ContainerRegistration
     {
+        /// <summary>
+        /// Register the necessary components in the DI container
+        /// </summary>
+        /// <param name="container">The DI container instance</param>
         public static void RegisterComponents(UnityContainer container)
         {
             container.RegisterType<IDataProvider, StaticData>(new ContainerControlledLifetimeManager());
