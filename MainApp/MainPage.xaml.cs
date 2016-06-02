@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using CompositionRoot;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,9 @@ namespace MainApp
         public MainPage()
         {
             this.InitializeComponent();
+
+            // Register components in the DI container
+            ContainerRegistration.RegisterComponents(Global.Container);
         }
     }
 }
